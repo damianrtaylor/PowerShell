@@ -1,4 +1,4 @@
-#Clear all event logs
+#Clear all event logs:
 wevtutil el | Foreach-Object {wevtutil cl “$_”}
 
 #Remove all files within a directory without being prompted for each:
@@ -11,14 +11,13 @@ Remove-Item C:\tobedeleted –Recurse
 Get-WmiObject -Class Win32_ComputerSystem
 
 #Information about the BIOS of the current computer:
-Get-WmiObject -Class Win32_BIOS -ComputerName .
+Get-WmiObject -Class Win32_BIOS -ComputerName
 
 #List installed hotfixes -- QFEs, or Windows Update files:
-Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName .
+Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName
 
 #Username of the person currently logged on to a computer:
-
-#Get-WmiObject -Class Win32_ComputerSystem -Property UserName -ComputerName .
+#Get-WmiObject -Class Win32_ComputerSystem -Property UserName -ComputerName
 
 #Find the names of installed applications on the current computer:
 Get-WmiObject -Class Win32_Product -ComputerName . | Format-Wide -Column 1
