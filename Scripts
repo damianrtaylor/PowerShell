@@ -1,3 +1,6 @@
+#Clear all event logs
+wevtutil el | Foreach-Object {wevtutil cl “$_”}
+
 #Remove all files within a directory without being prompted for each:
 Remove-Item C:\tobedeleted –Recurse
 
