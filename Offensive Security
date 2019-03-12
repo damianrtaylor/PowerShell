@@ -14,4 +14,4 @@ cipher /w:C:
 cipher /w:C:\Users\Username\Documents
 #NOTE: Cipher is slow, a large drive could take several hours, even a single folder can take more than a half hour.
 #NOTE: After/while running Cipher, sometimes a temporary folder call "EFSTMPWP" (Extensible File System Temporary Files
-Working Placeholder). Cipher should remove the temporary files in that folder when finished, but if not, it can be deleted.
+Working Placeholder). Once the operation is completed successfully, cipher.exe will delete the folder. But if for some reason, the operation is interrupted, this folder may remain undeleted, if that's the case if can be deleted.
