@@ -1,0 +1,17 @@
+#Clear all event logs:
+wevtutil el | Foreach-Object {wevtutil cl “$_”}
+
+#Remove all files within a directory without being prompted for each:
+Remove-Item C:\tobedeleted –Recurse
+
+#Restart the current computer:
+Get-WmiObject -Class Win32_OperatingSystem -ComputerName Win32Shutdown
+
+#Securely delete files 
+#All free space on hard drive:
+cipher /w:C:
+#Free space in a specific folder
+cipher /w:C:\Users\Kenny\Documents
+#NOTE: Cipher is slow, a large drive could take several hours, even a single folder can take more than a half hour.
+#NOTE: After/while running Cipher, sometimes a temporary folder call "EFSTMPWP" (Extensible File System Temporary Files
+Working Placeholder). Cipher should remove the temporary files in that folder when finished, but if not, it can be deleted.
