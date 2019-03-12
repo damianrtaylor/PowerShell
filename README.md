@@ -1,1 +1,1 @@
-# PowerShell
+Collection of useful Windows Powershell scripts
