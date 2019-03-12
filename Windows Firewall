@@ -1,6 +1,6 @@
-#Create outbound firewall rule to block all traffic from the local computer that originates on TCP port 80
+#Block all outbound traffic from the local computer that originates on TCP port 80
 PS C:\> New-NetFirewallRule -DisplayName "Block Outbound Port 80" -Direction Outbound -LocalPort 80 -Protocol TCP -Action Block
 
-#Create firewall rules that block all of the wireless network traffic
+#Block all wireless network traffic
 PS C:\> New-NetFirewallRule -Name "Block Wireless In" -Direction Inbound -InterfaceType Wireless -Action Block
 PS C:\> New-NetFirewallRule -Name "Block Wireless Out" -Direction Outbound -InterfaceType Wireless -Action Block
