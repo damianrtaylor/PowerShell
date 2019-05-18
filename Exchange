@@ -1,0 +1,5 @@
+#Delete Attachment from all mailboxes on Exchange Server and log results
+Get-Mailbox -ResultSize Unlimited -Server “SERVERNAME" | Search-Mailbox -SearchQuery "attachment: 'ATTACHMENT NAME.extension' and from:SENDER" -targetmailbox “NAME” -targetfolder “inbox” -loglevel full -deletecontent -force
+
+#Search for attachment and log
+Search-Mailbox -Identity 'IT JOHN DOE' -SearchQuery Attachment:'ATTACHMENT NAME.extension' -TargetMailbox 'ACCOUNT NAME TO SEND RESULTS'-TargetFolder 'Inbox' -LogOnly -LogLevel Full
